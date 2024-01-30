@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class JokeApiService {
   private apiUrl = 'https://jokes-by-api-ninjas.p.rapidapi.com/v1/jokes';
   private headers = {
-    'X-RapidAPI-Key': 'f9d20c663dmsh2229b9fde221db0p128f52jsn954c5436def1',
+    'X-RapidAPI-Key': 'xxx',
     'X-RapidAPI-Host': 'jokes-by-api-ninjas.p.rapidapi.com'
   };
 
