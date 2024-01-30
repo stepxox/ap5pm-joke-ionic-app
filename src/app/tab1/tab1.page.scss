@@ -1,0 +1,23 @@
+ion-item {
+  --padding-start: 0;
+  --padding-end: 0;
+  --padding-top: 0;
+  --padding-bottom: 0;
+  --inner-padding-end: 20px;
+  --inner-padding-start: 20px;
+  --border-width: 0px;
+  --background: transparent;
+  margin-bottom: 15px;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* Pokud používáte ion-list, můžete také upravit jeho styly */
+ion-list {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+ion-fab {
+  --fab-background: grey; /* Nastaví barvu tlačítka na šedou */
+  margin-bottom: 56px; /* Posune tlačítko výše o velikost šipky dolů */
+}

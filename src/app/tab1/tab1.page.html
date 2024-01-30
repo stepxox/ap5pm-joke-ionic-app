@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Joker
+    </ion-title>
+    <!-- Tlačítko pro vymazání vtipů je stále zde -->
+    <ion-buttons slot="primary">
+      <ion-button (click)="clearJokes()">
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let joke of jokes">
+      {{ joke.joke }}
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title slot="start">
+      Number of jokes: {{ jokeLimit }}
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="updateJokeLimit(jokeLimit + 1)">
+        <ion-icon slot="icon-only" name="arrow-up"></ion-icon>
+      </ion-button>
+      <ion-button (click)="updateJokeLimit(jokeLimit - 1)" [disabled]="jokeLimit <= 1">
+        <ion-icon slot="icon-only" name="arrow-down"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
+
+<!-- Přidání tlačítka + do ion-fab umístěného v pravém dolním rohu -->
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button (click)="generateJokes()">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
